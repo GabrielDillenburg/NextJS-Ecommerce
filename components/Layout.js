@@ -27,6 +27,15 @@ export default function Layout({ title, description, children }) {
 				margin: '1rem 0',
 			},
 		},
+		palette: {
+			type: 'light',
+			primary: {
+				main: '#f0c000',
+			},
+			secondary: {
+				main: '#208080',
+			},
+		},
 	})
 	const classes = useStyles()
 	return (
