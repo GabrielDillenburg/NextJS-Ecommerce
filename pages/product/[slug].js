@@ -24,7 +24,7 @@ export default function ProductScreen() {
 		return <div> Product Not Found</div>
 	}
 	return (
-		<Layout title={product.name}>
+		<Layout title={product.name} description={product.description}>
 			<div className={classes.section}>
 				<NextLink href='/' passHref>
 					<Link>
