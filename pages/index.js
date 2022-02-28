@@ -14,6 +14,8 @@ import {
 } from '@material-ui/core'
 import data from '../utils/data'
 import NextLink from 'next/link'
+import db from '../utils/db'
+import Product from '../models/Product'
 
 export default function Home() {
 	return (
@@ -50,4 +52,17 @@ export default function Home() {
 			</div>
 		</Layout>
 	)
+}
+
+// get products before the page render
+export async function getServerSideProps() {
+	await db.connect()
+	const products = await Product.find({})
+	await db.disconnect()
+
+	return {
+		props: {
+			products,
+		},
+	}
 }
