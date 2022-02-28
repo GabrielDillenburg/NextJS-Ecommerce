@@ -16,6 +16,7 @@ const useStyles = makeStyles({
 	},
 	footer: {
 		textAlign: 'center',
+		marginTop: 10,
 	},
 	brand: {
 		fontWeight: 'bold',
